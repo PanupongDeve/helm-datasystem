@@ -1,0 +1,5 @@
+image:
+  repository: bitnamilegacy/redis
+
+replica:
+  replicaCount: 1
