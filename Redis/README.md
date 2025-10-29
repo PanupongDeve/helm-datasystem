@@ -22,7 +22,7 @@ Find version redis: https://artifacthub.io/packages/helm/bitnami/redis
 
 
 ```
-helm install redis oci://registry-1.docker.io/bitnamicharts/redis --version 19.2.0  -n redis --set redis.password='password' --set replica.replicaCount=1
+helm install redis oci://registry-1.docker.io/bitnamicharts/redis --version 19.2.0 -f values.yaml  -n redis --set redis.password='password'
 ```
 
 
