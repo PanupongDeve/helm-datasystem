@@ -22,14 +22,21 @@ Find version redis: https://artifacthub.io/packages/helm/bitnami/redis
 
 
 ```
-helm install redis oci://registry-1.docker.io/bitnamicharts/redis --version 19.2.0 -f values.yaml  -n redis --set redis.password='password'
+helm install redis oci://registry-1.docker.io/bitnamicharts/redis --version 19.2.0 -f values.yaml  -n redis --set auth.password='password'
 ```
 
 
 ### Cleanup
 ```bash
 kubens redis
+kubectl delete -f ./redis-np.yaml
 helm uninstall redis
 kubectl get pvc
 kubectl delete pvc redis-data-redis-master-0  redis-data-redis-replicas-0
 ```
+
+
+### Client Tools
+Name: Redis insight  
+Source: https://redis.io/downloads 
+
